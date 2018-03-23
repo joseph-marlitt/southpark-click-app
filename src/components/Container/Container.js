@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import imageData from "../../imageData.json";
-import ImageList from "../ImageList"
+import ImageList from "../ImageList";
+import Wrapper from "../Wrapper"
 
 class Container extends Component {
   state = {
@@ -23,14 +24,21 @@ resetScore() {
 
 }
 
+shuffleImages() {
+
+}
+
   render() {
       return (
+        <Wrapper>
+        <div className="scoreboard"></div>
         <div className="container">
           <ImageList imageData={imageData} 
           highscoreHandler={this.highscoreHandler.bind(this)}
           resetScore= {this.resetScore.bind(this)}
           />
         </div>  
+        </Wrapper>
       )}
 }
   

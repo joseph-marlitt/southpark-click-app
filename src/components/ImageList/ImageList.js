@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "../Image"
-// import imageData from "./imageData.json";
 
 class ImageList extends React.Component{
 
@@ -9,12 +8,10 @@ class ImageList extends React.Component{
         }
 
 
-validateImage = (id) => {
+validateImage = event => {
     console.log("test")
-    this.state.clicked.map((clickedItem) => {
-        if (clickedItem === id) {
-          return  this.highscoreHandler();
-        }
+    this.state.clicked.includes((id) => {
+          return  this.props.highscoreHandler();
     })
   }
   
