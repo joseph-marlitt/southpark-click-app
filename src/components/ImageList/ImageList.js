@@ -1,34 +1,25 @@
-import React, { Component } from "react";
-import Image from "./Image"
-import imageData from "./imageData.json";
+import React from "react";
+import Image from "../Image"
+// import imageData from "./imageData.json";
 
 class ImageList extends React.Component{
+
     state = {
             clicked: [],
         }
-
-    
-    validateImage = (event) => {
-        console.log("test")
-        this.imageData.forEach(imageItem => {
-            if (this.imageItem.key !== this.state.clicked) {
-                this.state.clicked.push(this.imageItem.id)
-            }
-        })
-    }   
 
 
 validateImage = (id) => {
     console.log("test")
     this.state.clicked.map((clickedItem) => {
         if (clickedItem === id) {
-            this.highscoreHandler();
+          return  this.highscoreHandler();
         }
     })
   }
   
 
-render() {
+render(props) {
     return (
             this.props.imageData.map((oneImage)=> {
             return <Image

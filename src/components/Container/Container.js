@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import imageData from "./imageData.json";
-import ImageList from "./ImageList"
+import imageData from "../../imageData.json";
+import ImageList from "../ImageList"
 
 class Container extends Component {
   state = {

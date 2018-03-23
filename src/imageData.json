@@ -3,48 +3,48 @@
     "id":1,
     "name": "image1",
     "key": 1,
-    "imageSrc": "http://via.placeholder.com/350x350"
+    "imageSrc": "/images/cartman.png"
     },
     {
     "id":2,
     "name": "image2",
     "key": 2,
-    "imageSrc": "http://via.placeholder.com/350x350"
+    "imageSrc": "/images/kyle.png"
     },
     {
     "id":3,
     "name": "image3",
     "key": 3,
-    "imageSrc": "http://via.placeholder.com/350x350"
+    "imageSrc": "/images/kenny.png"
     },
     {
     "id":4,
     "name": "image4",
     "key": 4,
-    "imageSrc": "http://via.placeholder.com/350x350"
+    "imageSrc": "/images/butters.png"
     },
     {
     "id":5,
     "name": "image5",
     "key": 5,
-    "imageSrc": "http://via.placeholder.com/350x350"
+    "imageSrc": "/images/randy.jpg"
     },
     {
     "id":6,
     "name": "image6",
     "key": 6,
-    "imageSrc": "http://via.placeholder.com/350x350"
+    "imageSrc": "/images/wendy.png"
     },
     {
     "id":7,
     "name": "image7",
     "key": 7,
-    "imageSrc": "http://via.placeholder.com/350x350"
+    "imageSrc": "/images/tweak.png"
     },
     {
     "id":8,
     "name": "image8",
     "key": 8,
-    "imageSrc": "http://via.placeholder.com/350x350"
+    "imageSrc": "/images/stan.png"
     }
 ]
