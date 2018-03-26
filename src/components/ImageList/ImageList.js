@@ -3,17 +3,34 @@ import Image from "../Image"
 
 class ImageList extends React.Component{
 
-    state = {
-            clicked: [],
+state = {
+        clicked: [],
+        score: 0,
+        highscore: 0
+    }
+
+
+validateImage = id => {
+    
+    if (this.state.clicked.includes(id)) {
+        this.setState({score: 0});
+        this.setState({clicked: []})
+    } else {
+        this.state.clicked.push(id);
+        this.setState({score: this.state.score +1})
+    }
+}
+
+componentDidUpdate(props) {
+    if(this.state.highscore < this.state.score) {
+        this.setState({highscore: this.state.score})
         }
-
-
-validateImage = event => {
-    console.log("test")
-    this.state.clicked.includes((id) => {
-          return  this.props.highscoreHandler();
-    })
-  }
+    props.shuffleImages(props.imageData)
+    console.log("highscore: " + this.state.highscore)
+    console.log(this.state.score)
+    console.log(this.state.highscore)
+    
+    }
   
 
 render(props) {
@@ -24,7 +41,9 @@ render(props) {
             imageSrc={oneImage.imageSrc}
             key={oneImage.id}
             id= {oneImage.id}
-            onClick={(onClick) => {this.validateImage(oneImage.id).bind(this)}} />
+            validateImage= {this.validateImage}
+            highscoreHandler= {this.highscoreHandler}
+            />
         })
     )}  
 };

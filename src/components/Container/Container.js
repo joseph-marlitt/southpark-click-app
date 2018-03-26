@@ -5,37 +5,31 @@ import Wrapper from "../Wrapper"
 
 class Container extends Component {
   state = {
+    imageData,
     score: 0,
     highscore: 0
   }
 
 
-highscoreHandler = () => {
-  let guesses = this.state.guesses;
-  this.setState({ guesses: this.state.guesses + 1 });
-  if (guesses >= this.state.highscore) {
-      this.setState({ highscore: guesses});
-      console.log(this.state.highscore)
+
+shuffleImages(ImageArray) {
+  for (let i = ImageArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [ImageArray[i], ImageArray[j]] = [ImageArray[j], ImageArray[i]];
   }
-};
-
-
-resetScore() {
-
+  return ImageArray;
 }
 
-shuffleImages() {
-
-}
 
   render() {
       return (
         <Wrapper>
         <div className="scoreboard"></div>
         <div className="container">
-          <ImageList imageData={imageData} 
-          highscoreHandler={this.highscoreHandler.bind(this)}
-          resetScore= {this.resetScore.bind(this)}
+          <ImageList 
+          imageData={this.shuffleImages(imageData)  } 
+          highscoreHandler={this.highscoreHandler}
+          shuffleImages= {this.shuffleImages.bind(this)}
           />
         </div>  
         </Wrapper>
