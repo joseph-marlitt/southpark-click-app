@@ -1,5 +1,6 @@
 {
   "name": "clicky-game",
+  "homepage": "https://joseph-marlitt.github.io/southpark-click-app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,7 +11,6 @@
     "react-scripts": "1.1.1"
   },
   "scripts": {
-    "homepage": "https://joseph-marlitt.github.io/southpark-click-app/",
     "predeploy": "npm run build",
     "deploy": "npm run build&&gh-pages -d build",
     "start": "react-scripts start",
