@@ -9,7 +9,7 @@
     "react-scripts": "1.1.1"
   },
   "scripts": {
-    "homepage": "https://joseph-marlitt.github.io/southpark-click-app/",
+    "homepage": "https://joseph-marlitt.github.io/southpark-click-app",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
