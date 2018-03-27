@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "../Image"
+import Scoreboard from "../Scoreboard"
+import "./ImageList.css"
 
 class ImageList extends React.Component{
 
@@ -33,19 +35,27 @@ componentDidUpdate(props) {
     }
   
 
-render(props) {
+render() {
     return (
-            this.props.imageData.map((oneImage)=> {
-            return <Image
-            name={oneImage.name}
-            imageSrc={oneImage.imageSrc}
-            key={oneImage.id}
-            id= {oneImage.id}
-            validateImage= {this.validateImage}
-            highscoreHandler= {this.highscoreHandler}
+        <div>
+            <Scoreboard 
+                score={this.state.score}
+                highscore= {this.state.highscore}
             />
-        })
-    )}  
+            <div className= "Imagelist">
+                {this.props.imageData.map((oneImage)=> {
+                    return  <Image 
+                    name={oneImage.name}
+                    imageSrc={oneImage.imageSrc}
+                    key={oneImage.id}
+                    id= {oneImage.id}
+                    validateImage= {this.validateImage}
+                    highscoreHandler= {this.highscoreHandler}
+                    />
+                })}
+            </div>
+        </div>
+     ) }  
 };
 
 export default ImageList;

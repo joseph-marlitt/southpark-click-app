@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
 import Container from './components/Container'
-import ImageList from './components/ImageList/ImageList';
-
+import Title from "./components/Title"
+import Wrapper from "./components/Wrapper"
 
 class App extends Component {
      render(){
        return ( 
-        <Container onClick= {ImageList}/>
+         <Wrapper>
+          <Title> South Park Clicky Game</Title>
+          <Container/>
+        </Wrapper>
        )}
 }
 export default App;
